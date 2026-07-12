@@ -2,6 +2,38 @@
 
 # Tutorial Example
 
+## First Step: Set R on your PATH
+
+Before you begin the Teal tutorial, make sure PowerShell can find the R executables.
+
+```powershell
+$env:Path += ";C:\Program Files\R\R-4.6.0\bin"
+Rscript --version
+```
+
+If the version string is printed, the `R` executable is available on your `PATH`. For a persistent setup, add `C:\Program Files\R\R-4.6.0\bin` to your Windows `PATH` environment variable and restart PowerShell.
+
+## Second Step: Activate the Project `renv`
+
+Once the R executable is available, activate the project-local environment from the repository root.
+
+```powershell
+cd "C:\Users\User\Desktop\Work\parexel\roche\teal_tutorial\teal_package_tutorial\teal.package.development"
+Rscript -e "renv::activate()"
+```
+
+This ensures that the project uses the dedicated `renv` environment rather than the system-wide R library.
+
+## Third Step: Install `teal`
+
+With the project environment active, install the main Teal package.
+
+```powershell
+Rscript -e "renv::install('teal')"
+```
+
+This installs `teal` into the project-local `renv` library so the tutorial remains reproducible and isolated.
+
 # Teal Ecosystem R Package Development Guide
 
 ## Introduction
