@@ -2,6 +2,8 @@
 
 # Tutorial Example
 
+As part of the tutorial we will be focussing on the teal.slice package from git clone https://github.com/insightsengineering/teal.slice.git
+
 ## First Step: Set R on your PATH
 
 Before you begin the Teal tutorial, make sure PowerShell can find the R executables.
@@ -33,6 +35,18 @@ Rscript -e "renv::install('teal')"
 ```
 
 This installs `teal` into the project-local `renv` library so the tutorial remains reproducible and isolated.
+
+## Fourth Step: Create a Local `teal.slice` Workspace and Clone the Repo
+
+To work directly on the upstream `teal.slice` package, create a dedicated folder for it and then clone the repository into that folder.
+
+```powershell
+New-Item -ItemType Directory -Path "C:\Users\User\Desktop\Work\parexel\roche\teal_tutorial\teal_package_tutorial\teal.package.development\teal.slice" -Force
+cd "C:\Users\User\Desktop\Work\parexel\roche\teal_tutorial\teal_package_tutorial\teal.package.development\teal.slice"
+git clone https://github.com/insightsengineering/teal.slice.git
+```
+
+This keeps the tutorial workspace organized by separating the project package development area from the upstream package source you are studying and improving.
 
 # Teal Ecosystem R Package Development Guide
 
