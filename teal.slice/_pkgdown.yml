@@ -1,0 +1,45 @@
+---
+url: https://insightsengineering.github.io/teal.slice
+
+template:
+  package: nesttemplate
+
+navbar:
+  structure:
+    left: [intro, reference, articles, tutorials, news, reports]
+    right: [search, github]
+  components:
+    reports:
+      text: Reports
+      menu:
+        - text: Coverage report
+          href: coverage-report/
+        - text: Unit test report
+          href: unit-test-report/
+        - text: Non-CRAN unit test report
+          href: unit-test-report-non-cran/
+    github:
+      icon: fa-github
+      href: https://github.com/insightsengineering/teal.slice
+
+reference:
+  - title: "`teal` filter-panel API"
+    desc: "Functions used initialize filter-panel and to modify its states."
+    contents:
+      - init_filtered_data
+      - set_filter_state
+      - get_filter_state
+      - get_filter_expr
+      - remove_filter_state
+      - clear_filter_states
+      - teal_slice
+      - teal_slices
+  - title: "For developers"
+    subtitle: "R6 Classes"
+    desc: "Abstract and concrete classes used to build teal functionality."
+    contents:
+      - FilteredData
+      - FilteredDataset
+      - FilterPanelAPI
+      - DataframeFilteredDataset
+      - MAEFilteredDataset
